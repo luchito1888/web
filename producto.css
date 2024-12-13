@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.user-actions .btn {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-actions .btn-register {
+    background: #000;
+    color: #fff;
+    border: none;
+}
+
+.product-info {
+    text-align: center;
+    padding: 30px;
+    background-color: #004236;
+    color: #fff;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.product-info .price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.customize {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.size-selection {
+    flex: 1;
+    text-align: center;
+}
+
+.size-selection .sizes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.size {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.size.active {
+    border-color: #32CD32; /* Verde brillante */
+    background-color: #32CD32; /* Verde brillante */
+    color: #fff;
+}
+
+.custom-options {
+    flex: 2;
+
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    transition: border-color 0.3s;
+}
+
+.custom-options:hover {
+    border: 2px solid #00FF00; /* Verde más fuerte al pasar el mouse */
+}
+
+.custom-options h2 {
+    margin-top: 0;
+    color: #004236;
+}
+
+.custom-options form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.custom-options select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #D2B48C; /* Marrón pastel */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.custom-options select:hover {
+    border-color: #00FF00; /* Verde más fuerte al pasar el mouse */
+    background-color: #F5DEB3; /* Amarillo pastel para el hover */
+}
+
+.custom-options label {
+    font-size: 16px;
+    color: #333;
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions .btn {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actions .btn-primary {
+    background-color: #32CD32; /* Verde brillante */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+
+.actions .btn-secondary {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+}
+
+footer {
+    background: #004236;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #004236;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.product-info .product-image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.product-info .product-image img {
+    width: 50%;
+    height: auto;
+    border-radius: 100%;
+}
+
+.product-info .product-details {
+    flex: 2;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-info .price {
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Media Queries para diferentes pantallas */
+@media (max-width: 1200px) {
+    .customize {
+        padding: 20px;
+    }
+    .sizes {
+        gap: 10px;
+    }
+    .size {
+        width: 100px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Pantallas pequeñas como tabletas */
+    .product-info h1 {
+        font-size: 20px;
+    }
+
+    .customize {
+        padding: 15px;
+    }
+
+    .size-selection {
+        width: 100%;
+    }
+
+    .sizes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .size {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .custom-options {
+        padding: 15px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .actions .btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pantallas muy pequeñas como móviles */
+    .product-info h1 {
+        font-size: 18px;
+    }
+
+    .product-info .price {
+        font-size: 16px;
+    }
+
+    .customize {
+        padding: 15px;
+    }
+
+    .custom-options {
+        padding: 15px;
+    }
+
+    /* Asegurando que el contenedor de tamaño siempre esté debajo */
+    .size-selection {
+        width: 100%;
+        order: 2; /* Coloca el contenedor debajo del formulario */
+    }
+
+    .sizes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .size {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .custom-options form {
+        gap: 10px;
+    }
+
+    .custom-options select {
+        font-size: 14px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .actions .btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .custom-options select {
+        width: 70%; /* Ancho reducido para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 1024px) {
+    .custom-options {
+        max-width: 500px; /* Ancho más pequeño para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-options {
+        max-width: 90%; /* Para pantallas móviles, ocupando el 90% del ancho disponible */
+    }
+}
+@media (max-width: 768px) {
+    .product-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-info .product-image {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-info .product-image img {
+        width: 80%;
+    }
+}
+
+/*.custom-options select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #D2B48C;
+    transition: border-color 0.3s, background-color 0.3s;
+    width: 80%; /* Reducir el ancho del combo box 
+    margin: 0 auto; 
+}/*
+
+
+
+
+ 
+
+
+
